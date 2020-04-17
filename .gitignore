@@ -1,4 +1,5 @@
-_init_.py
+__init__.py
+__pycache__
 mysqltest.py
 test.ipynb
 .ipynb_checkpoints
