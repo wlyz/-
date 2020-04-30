@@ -28,10 +28,6 @@ def add_prefix_suffix():  # 序列前后缀标准化
 
 
 class Sequence:
-    # seq = ''
-    # legal = True
-    # normalization = True
-    # illegalWords = {'GAATTC': None, 'TCTAGA': None, 'ACTAGT': None, 'CTGCAG': None, 'GCGGCCGC': None}
 
     def __init__(self, seq):
         self.seq = seq.upper()

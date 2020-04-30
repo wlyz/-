@@ -2,5 +2,6 @@ __init__.py
 __pycache__
 mysqltest.py
 test.ipynb
+testfile.txt
 .ipynb_checkpoints
 .idea
