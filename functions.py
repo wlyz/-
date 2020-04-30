@@ -2,18 +2,18 @@ from csv import DictReader
 import numpy as np
 
 
-def readFile(input_file, input_type):
+def read_file(input_file, input_type):
     if input_type == 'CSV':
-        return readCSV(input_file)
+        return read_CSV(input_file)
     elif input_type == 'Fasta':
-        return readFasta(input_file)
+        return read_Fasta(input_file)
     elif input_type == 'GenBank':
-        return readGenbank(input_file)
+        return read_Genbank(input_file)
     elif input_type == 'txt':
-        return readTxt(input_file)
+        return read_txt(input_file)
 
 
-def readCSV(input_file, sep=","):
+def read_CSV(input_file, sep=","):
     list_seq = []
 
     reader = DictReader(open(input_file), delimiter=sep, quotechar='"')
@@ -24,25 +24,25 @@ def readCSV(input_file, sep=","):
     return list_seq
 
 
-def readTxt(input_file):
+def read_txt(input_file):
     with open(input_file, 'r') as f:
         seq = f.read()
     return seq
 
 
-def readFasta():
+def read_Fasta():
     pass
 
 
-def readGenbank():
+def read_Genbank():
     pass
 
 
-def separateSeq(seq):  # separate a sequence into 3-words groups
+def separate_seq(seq):  # separate a sequence into 3-words groups
     pass
 
 
-def mutationRule():  # 突变规则
+def mutation_rule():  # 突变规则
 
     pass
 
