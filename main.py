@@ -3,7 +3,10 @@ from sequence import Sequence
 import numpy as np
 
 if __name__ == '__main__':
-    Sequence(readFile('testfile.txt', 'txt'))
+    S = Sequence(readFile('testfile.txt', 'txt'))
+    print(S.seq)
+    print(S.legal)
+    print(S.illegalWords)
 
     # print(readFile('testfile.txt', 'txt'))
     # seqs = readCSV('partial_ecoli_genome.csv')
