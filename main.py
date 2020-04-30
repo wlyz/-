@@ -1,12 +1,12 @@
-from functions import readFile
+from functions import read_file
 from sequence import Sequence
 import numpy as np
 
 if __name__ == '__main__':
-    S = Sequence(readFile('testfile.txt', 'txt'))
+    S = Sequence(read_file('testfile.txt', 'txt'))
     print(S.seq)
     print(S.legal)
-    print(S.illegalWords)
+    print(S.illegal_words)
 
     # print(readFile('testfile.txt', 'txt'))
     # seqs = readCSV('partial_ecoli_genome.csv')

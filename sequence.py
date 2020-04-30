@@ -1,14 +1,14 @@
-def isSeq(seq):  # 判断是否ATCG序列
-    dictSeq = {}
+def is_seq(seq):  # 判断是否ATCG序列
+    dict_seq = {}
     for s in seq:
-        dictSeq[s] = seq.count(s)
-    if len(dictSeq) != 4:
+        dict_seq[s] = seq.count(s)
+    if len(dict_seq) != 4:
         return False
     else:
         return True
 
 
-def isLegal(seq):  # 判断有无非法酶切位点
+def is_legal(seq):  # 判断有无非法酶切位点
     legal = True
     illegal_words = {'GAATTC': None, 'TCTAGA': None, 'ACTAGT': None, 'CTGCAG': None, 'GCGGCCGC': None}
     for sites in ['GAATTC', 'TCTAGA', 'ACTAGT', 'CTGCAG', 'GCGGCCGC']:
@@ -35,5 +35,4 @@ class Sequence:
 
     def __init__(self, seq):
         self.seq = seq.upper()
-        self.legal, self.illegalWords = isLegal(seq)
-
+        self.legal, self.illegal_words = is_legal(seq)
